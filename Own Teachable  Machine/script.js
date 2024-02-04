@@ -9,11 +9,7 @@ const MOBILE_NET_INPUT_WIDTH = 224;
 const MOBILE_NET_INPUT_HEIGHT = 224;
 const STOP_DATA_GATHER = -1;
 const CLASS_NAMES = [];
-const EXPORT_BUTTON = document.getElementById('exportModel');
 
-
-
-EXPORT_BUTTON.addEventListener('click', exportModel);
 ENABLE_CAM_BUTTON.addEventListener('click', enableCam);
 TRAIN_BUTTON.addEventListener('click', trainAndPredict);
 RESET_BUTTON.addEventListener('click', reset);
@@ -313,21 +309,6 @@ function predictLoop() {
 
     window.requestAnimationFrame(predictLoop);
   }
-}
-
-
-async function exportModel() {
-  // Convert the model to JSON format.
-  const modelJson = model.toJSON();
-
-  // Convert the JSON to a Blob for download.
-  const modelBlob = new Blob([JSON.stringify(modelJson)], { type: 'application/json' });
-
-  // Create a download link and trigger the download.
-  const downloadLink = document.createElement('a');
-  downloadLink.href = URL.createObjectURL(modelBlob);
-  downloadLink.download = 'trained_model.json';
-  downloadLink.click();
 }
 
 /**
