@@ -1,0 +1,64 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #FF6F00;
+}
+
+canvas {
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin: 10px auto 5px auto;
+  zoom: 6;
+}
+
+p {
+  margin: 5px;
+}
+
+p#prediction {
+  font-size: 16pt;
+  margin: 10px;
+  text-align: center;
+}
+
+p#prediction.correct {
+  border: 3px solid #00ff00;
+  color: #00ff00;
+  font-size: 64pt;
+}
+
+p#prediction.wrong {
+  border: 3px solid #ff0000;
+  color: #ff0000;
+  font-size: 64pt;
+}
+
+.box {
+  width: 45%;
+  margin: 1%;
+  border: 1px dashed #cdcdcd;
+  display: inline-block;
+  min-height: 400px;
+  text-align: center;
+  float: left;
+}
+
+.blocky {
+  clear: both;
+  text-align: center;
+  font-size: 120%;
+  margin-top: 20px;
+}
+
+.slider {
+  width: 50%;
+  background: #d3d3d3;
+  outline: none;
+  margin: 0 auto;
+  display: block;
+}
