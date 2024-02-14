@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello World - TensorFlow.js</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>  
+  <body>
+    <h1>TensorFlow.js Fashion MNIST classifier</h1>
+    <p>This experiment shows how you can use the power of Machine Learning directly in your browser to train and use a simple Neural Network with 3 layers (1 hidden) of the form  (32 : 16 : 10) to classify fashion items from the Fashion MNIST dataset.</p>
+    
+    <p>See console for even more outputs.</p>
+    
+    <section class="box">
+      <h2>Input Image</h2>
+      <p>Input image is a 28x28 pixel greyscale image from the Fashion MNIST dataset - a piece of clothing!</p>
+      <canvas id="canvas" width="28" height="28"></canvas>
+    </section>
+    
+    <section class="box">
+      <h2>Prediction</h2>
+      <p>Below you see what item the trained TensorFlow.js model has predicted from the input image.</p>
+      <p>It should get it right most of the time, but of course it's not perfect, so there will be times when it doesn't. Red is a wrong prediction, Green is a correct one.</p>
+      <p id="prediction">Training model. Please wait...</p>
+    </section>
+    
+    <div class="blocky">
+      <p id="domSpeed">Change interval between classifications! Currently 1000ms</p>
+      <input id="ranger" type="range" min="15" max="5000" value="2000" class="slider">
+    </div>
+   
+    <!-- Import TensorFlow.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js" type="text/javascript"></script>
+    
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
